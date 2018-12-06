@@ -53,7 +53,7 @@ metadata:
     app: redis-cluster
 spec:
   serviceName: redis-cluster
-  replicas: 6
+  replicas: 4
   selector:
     matchLabels:
       app: redis-cluster
@@ -113,4 +113,4 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 100Mi
+          storage: 1000Mi
