@@ -3,6 +3,10 @@ A [redis cluster](https://redis.io/topics/cluster-tutorial) running in Kubernete
 
 If the cluster configuration of a redis node is lost in some way, it will come back with a different ID, which upsets the balance in the cluster (and probably in the Force). To prevent this, the setup uses a combination of Kubernetes StatefulSets and PersistentVolumeClaims to make sure the state of the cluster is maintained after rescheduling or failures.
 
+## Before you begin
+
+This guide assumes you are setup to manage a [GKE cluster via kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/managing-clusters).
+
 ## Cleaning existing setup
 
 If you have a failing exisitng redis cluster then you first need to remove it, ensuring that you delete:
