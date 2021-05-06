@@ -5,7 +5,7 @@ If the cluster configuration of a redis node is lost in some way, it will come b
 
 ## Before you begin
 
-This guide assumes you are setup to manage a [GKE cluster via kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/managing-clusters).
+This guide assumes you are setup to manage a [GKE cluster via kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/managing-clusters) as well as being connected to the [DI Cluster](https://console.cloud.google.com/kubernetes/clusters/details/europe-west2-b/di-prod/details?project=digital-intelligence-208511).
 
 ## Cleaning existing setup
 
