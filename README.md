@@ -21,8 +21,7 @@ kubectl apply -f redis-cluster.yml
 ```
 This will spin up 6 `redis-cluster` pods one by one, which may take a while. After all pods are in a running state, you can itialize the cluster using the `redis-cli` in any of the pods. After the initialization, you will end up with 3 master and 3 slave nodes.
 ``` bash
-kubectl exec -it redis-cluster-0 -- redis-cli --cluster create --cluster-replicas 1 \
-$(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ' | sed 's/ :6379//g)
+kubectl exec -it redis-cluster-0 -- redis-cli --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ' | sed 's/ :6379//g)
 ```
 
 ## Adding nodes
