@@ -10,7 +10,7 @@ data:
     #!/bin/sh
     CLUSTER_CONFIG="/data/nodes.conf"
     if [ -f ${CLUSTER_CONFIG} ]; then
-      if [ -z "${POD_IP}" ]; then 
+      if [ -z "${POD_IP}" ]; then
         echo "Unable to determine Pod IP address!"
         exit 1
       fi
@@ -53,7 +53,7 @@ metadata:
     app: redis-cluster
 spec:
   serviceName: redis-cluster
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: redis-cluster
